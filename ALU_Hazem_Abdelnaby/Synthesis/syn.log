@@ -1,0 +1,273 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version O-2018.06-SP1 for linux64 - Jul 19, 2018 
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  /home/ICer/.synopsys_dv_prefs.tcl
+lappend search_path ICer@IC_EDA /home/ICer/Shared_Folder/ALU/std_cells
+. /home/synopsys/syn/O-2018.06-SP1/libraries/syn /home/synopsys/syn/O-2018.06-SP1/minpower/syn /home/synopsys/syn/O-2018.06-SP1/dw/syn_ver /home/synopsys/syn/O-2018.06-SP1/dw/sim_ver ICer@IC_EDA /home/ICer/Shared_Folder/ALU/std_cells
+lappend search_path ICer@IC_EDA /home/ICer/Shared_Folder/ALU/rtl
+. /home/synopsys/syn/O-2018.06-SP1/libraries/syn /home/synopsys/syn/O-2018.06-SP1/minpower/syn /home/synopsys/syn/O-2018.06-SP1/dw/syn_ver /home/synopsys/syn/O-2018.06-SP1/dw/sim_ver ICer@IC_EDA /home/ICer/Shared_Folder/ALU/std_cells ICer@IC_EDA /home/ICer/Shared_Folder/ALU/rtl
+set TTLIB "scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db"
+scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+set target_library [list $TTLIB]
+scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+set link_library [list * $TTLIB]
+* scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+read_file -format verilog "ALU_TOP.v  ARITHMETIC_UNIT.v  CMP_UNIT.v  Decoder.v  LOGIC_UNIT.v  SHIFT_UNIT.v "
+Loading db file '/home/ICer/Shared_Folder/ALU/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/gtech.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/standard.sldb'
+  Loading link library 'scmetro_tsmc_cl013g_rvt_tt_1p2v_25c'
+  Loading link library 'gtech'
+Loading verilog files: '/home/ICer/Shared_Folder/ALU/rtl/ALU_TOP.v' '/home/ICer/Shared_Folder/ALU/rtl/ARITHMETIC_UNIT.v' '/home/ICer/Shared_Folder/ALU/rtl/CMP_UNIT.v' '/home/ICer/Shared_Folder/ALU/rtl/Decoder.v' '/home/ICer/Shared_Folder/ALU/rtl/LOGIC_UNIT.v' '/home/ICer/Shared_Folder/ALU/rtl/SHIFT_UNIT.v' 
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/ICer/Shared_Folder/ALU/rtl/ALU_TOP.v
+Compiling source file /home/ICer/Shared_Folder/ALU/rtl/ARITHMETIC_UNIT.v
+Compiling source file /home/ICer/Shared_Folder/ALU/rtl/CMP_UNIT.v
+Compiling source file /home/ICer/Shared_Folder/ALU/rtl/Decoder.v
+Compiling source file /home/ICer/Shared_Folder/ALU/rtl/LOGIC_UNIT.v
+Compiling source file /home/ICer/Shared_Folder/ALU/rtl/SHIFT_UNIT.v
+Warning:  /home/ICer/Shared_Folder/ALU/rtl/ARITHMETIC_UNIT.v:29: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/ICer/Shared_Folder/ALU/rtl/ARITHMETIC_UNIT.v:33: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/ICer/Shared_Folder/ALU/rtl/ARITHMETIC_UNIT.v:37: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/ICer/Shared_Folder/ALU/rtl/ARITHMETIC_UNIT.v:41: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/ICer/Shared_Folder/ALU/rtl/ARITHMETIC_UNIT.v:44: signed to unsigned assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 19 in file
+	'/home/ICer/Shared_Folder/ALU/rtl/ARITHMETIC_UNIT.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            26            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine ARITHMETIC_UNIT line 55 in file
+		'/home/ICer/Shared_Folder/ALU/rtl/ARITHMETIC_UNIT.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    Arith_OUT_reg    | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   Arith_Flag_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine CMP_UNIT line 63 in file
+		'/home/ICer/Shared_Folder/ALU/rtl/CMP_UNIT.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     CMP_OUT_reg     | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    CMP_Flag_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Statistics for case statements in always block at line 6 in file
+	'/home/ICer/Shared_Folder/ALU/rtl/Decoder.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            13            |    auto/auto     |
+===============================================
+Warning:  /home/ICer/Shared_Folder/ALU/rtl/LOGIC_UNIT.v:30: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/ICer/Shared_Folder/ALU/rtl/LOGIC_UNIT.v:35: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/ICer/Shared_Folder/ALU/rtl/LOGIC_UNIT.v:40: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/ICer/Shared_Folder/ALU/rtl/LOGIC_UNIT.v:45: signed to unsigned assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 19 in file
+	'/home/ICer/Shared_Folder/ALU/rtl/LOGIC_UNIT.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            27            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine LOGIC_UNIT line 58 in file
+		'/home/ICer/Shared_Folder/ALU/rtl/LOGIC_UNIT.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    Logic_OUT_reg    | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   Logic_Flag_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Warning:  /home/ICer/Shared_Folder/ALU/rtl/SHIFT_UNIT.v:27: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/ICer/Shared_Folder/ALU/rtl/SHIFT_UNIT.v:31: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/ICer/Shared_Folder/ALU/rtl/SHIFT_UNIT.v:35: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/ICer/Shared_Folder/ALU/rtl/SHIFT_UNIT.v:39: signed to unsigned assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 17 in file
+	'/home/ICer/Shared_Folder/ALU/rtl/SHIFT_UNIT.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            24            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine SHIFT_UNIT line 51 in file
+		'/home/ICer/Shared_Folder/ALU/rtl/SHIFT_UNIT.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    SHIFT_OUT_reg    | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   SHIFT_Flag_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/ICer/Shared_Folder/ALU/rtl/ALU_TOP.db:ALU_TOP'
+Loaded 6 designs.
+Current design is 'ALU_TOP'.
+ALU_TOP ARITHMETIC_UNIT CMP_UNIT Decoder LOGIC_UNIT SHIFT_UNIT
+link
+
+  Linking design 'ALU_TOP'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (6 designs)               /home/ICer/Shared_Folder/ALU/rtl/ALU_TOP.db, etc
+  scmetro_tsmc_cl013g_rvt_tt_1p2v_25c (library) /home/ICer/Shared_Folder/ALU/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+
+1
+compile
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | O-2018.06-DWBB_201806.1 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 7 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'Decoder'
+  Processing 'SHIFT_UNIT'
+  Processing 'CMP_UNIT'
+  Processing 'LOGIC_UNIT'
+  Processing 'ARITHMETIC_UNIT'
+  Processing 'ALU_TOP'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Design 'ALU_TOP' has no optimization constraints set. (OPT-108)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'CMP_UNIT_DW01_cmp6_0'
+  Processing 'ARITHMETIC_UNIT_DW01_addsub_0'
+  Processing 'ARITHMETIC_UNIT_DW_div_tc_0'
+  Processing 'ARITHMETIC_UNIT_DW02_mult_0'
+  Processing 'ARITHMETIC_UNIT_DW01_add_0'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Structuring 'Decoder'
+  Mapping 'Decoder'
+  Structuring 'SHIFT_UNIT'
+  Mapping 'SHIFT_UNIT'
+  Structuring 'CMP_UNIT'
+  Mapping 'CMP_UNIT'
+  Structuring 'LOGIC_UNIT'
+  Mapping 'LOGIC_UNIT'
+  Structuring 'ARITHMETIC_UNIT'
+  Mapping 'ARITHMETIC_UNIT'
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:02   30190.6      0.00       0.0       6.2                          
+    0:00:02   30190.6      0.00       0.0       6.2                          
+    0:00:02   30190.6      0.00       0.0       6.2                          
+    0:00:02   30190.6      0.00       0.0       6.2                          
+    0:00:02   30190.6      0.00       0.0       6.2                          
+    0:00:02   14787.6      0.00       0.0       0.1                          
+    0:00:02   14786.4      0.00       0.0       0.1                          
+    0:00:03   14786.4      0.00       0.0       0.0                          
+    0:00:03   14786.4      0.00       0.0       0.0                          
+    0:00:03   14786.4      0.00       0.0       0.0                          
+    0:00:03   14786.4      0.00       0.0       0.0                          
+    0:00:03   14786.4      0.00       0.0       0.0                          
+    0:00:03   14786.4      0.00       0.0       0.0                          
+    0:00:03   14786.4      0.00       0.0       0.0                          
+    0:00:03   14786.4      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:03   14786.4      0.00       0.0       0.0                          
+    0:00:03   14786.4      0.00       0.0       0.0                          
+    0:00:03   14786.4      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:03   14786.4      0.00       0.0       0.0                          
+    0:00:03   14786.4      0.00       0.0       0.0                          
+    0:00:03   14755.8      0.00       0.0       0.0                          
+    0:00:03   14755.8      0.00       0.0       0.0                          
+    0:00:03   14755.8      0.00       0.0       0.0                          
+    0:00:03   14755.8      0.00       0.0       0.0                          
+    0:00:03   14755.8      0.00       0.0       0.0                          
+    0:00:03   14755.8      0.00       0.0       0.0                          
+    0:00:03   14755.8      0.00       0.0       0.0                          
+    0:00:03   14755.8      0.00       0.0       0.0                          
+    0:00:03   14755.8      0.00       0.0       0.0                          
+Loading db file '/home/ICer/Shared_Folder/ALU/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+write_file -format verilog -output ALU_netlist.v
+Writing verilog file '/mnt/hgfs/Shared_Folder/ALU/syn/ALU_netlist.v'.
+1
+1
+dc_shell> gui_start
+dc_shell> Current design is 'ALU_TOP'.
+4.1
+Current design is 'ALU_TOP'.
+dc_shell> Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/generic.sdb'
+dc_shell> exit
+
+Memory usage for main task 263 Mbytes.
+Memory usage for this session 263 Mbytes.
+CPU usage for this session 9 seconds ( 0.00 hours ).
+
+Thank you...
